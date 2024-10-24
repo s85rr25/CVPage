@@ -1,0 +1,47 @@
+.experience-page {
+    background: #E7CCCC;
+    padding: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    height: wrap-content;
+    padding: 3rem calc((100vw-1300px)/2);
+    align-items: center;
+}
+
+.pwc-column, .hku-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+.experience-container p {
+    margin: 0;
+    padding: 1rem;
+    text-align: justify;
+}
+
+.gui-vil, .scattered-spider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pwc-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(600px, 1fr));
+    align-items: center;
+    padding: 2rem;
+}
+
+.hku-photo {
+    width: 75%;
+    height: auto;
+    filter: drop-shadow(0 0 50px rgba(165, 182, 141, 0.9));
+}
