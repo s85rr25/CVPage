@@ -1,0 +1,37 @@
+.service-page {
+    background: #E7CCCC;
+    padding: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+    height: wrap-content;
+    padding: 3rem calc((100vw-1300px)/2);
+    align-items: center;
+}
+
+.girlcode-slider-wrapper, .hope-slider-wrapper {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.girlcode-slider-wrapper .girlcode-image-list, .hope-slider-wrapper .hope-image-list{
+    display: grid;
+    gap: 18px;
+    margin-bottom: 30px;
+    font-size: 0;
+    overflow-x: auto;
+    grid-template-columns: repeat(18, 1fr)
+}
+
+.girlcode-slider-wrapper .girlcode-image-list .image-item, .hope-slider-wrapper .hope-image-list .image-item {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
