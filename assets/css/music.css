@@ -1,0 +1,35 @@
+.music-page {
+    background: #E7CCCC;
+    padding: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.music-container {
+    display: flex;
+    flex-direction: column;
+    height: wrap-content;
+    padding: 3rem calc((100vw-1300px)/2);
+    align-items: center;
+}
+
+video {
+    margin-bottom: 0.5rem;
+    margin-top: 3rem;
+    max-width: 800px;
+    height: auto;
+}
+
+.orchestra-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(500px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+img {
+    max-height: 500px;
+    width: auto;
+    padding: 2rem;
+}

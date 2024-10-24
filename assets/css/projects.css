@@ -1,0 +1,55 @@
+.projects-page {
+    background: #E7CCCC;
+    padding: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    height: wrap-content;
+    padding: 3rem calc((100vw-1300px)/2);
+    align-items: center;
+}
+
+.hackathon-slider-wrapper, .codehers-slider-wrapper {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hackathon-slider-wrapper .hackathon-image-list, .codehers-slider-wrapper .codehers-image-list{
+    display: grid;
+    gap: 18px;
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    grid-template-columns: repeat(18, 1fr)
+}
+
+.hackathon-slider-wrapper .hackathon-image-list .image-item, .codehers-slider-wrapper .codehers-image-list .image-item {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.edupulse-column, .shareable-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+.edupulse-column img {
+    width: 120%;
+}
+
+.shareable-column img {
+    width: 50%;
+    margin-left: 40px;
+    float: right;
+}
