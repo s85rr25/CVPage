@@ -11,6 +11,7 @@
     height: wrap-content;
     padding: 3rem calc((100vw-1300px)/2);
     align-items: center;
+    justify-content: center;
 }
 
 .pwc-column, .hku-column {

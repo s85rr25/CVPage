@@ -118,6 +118,7 @@ nav a:hover{
     gap: 1rem;
     height: wrap-content;
     padding: 3rem calc((100vw-1300px)/2);
+    align-items: center;
 }
 
 .home-column-left {
