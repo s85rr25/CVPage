@@ -2,82 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sherry Shen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sherry Shen - Data Science and Economics student at UC Berkeley">
+    <title>Sherry Shen | Portfolio</title>
     <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/page-navigation.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="logo">Sherry Shen</div>
-        <div class="nav-items">
-            <a href="index.html">Home</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="projects.html">Projects</a>
-            <a href="service.html">Service</a>
-            <a href="music.html">Music</a>
-            <a href="sports.html">Sports</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-    <section class="home-page">
-        <div class="home-container">
-            <div class="home-column-left">
-                <h1>🌺Hello, I'm Sherry!🌺</h1>
-                <p>
-                    I am a student studying Data Science and Economics at UC Berkeley. I was born and raised in Hong Kong, so I am fluent in English, Mandarin, and Cantonese. In my free time, I enjoy music, bouldering, and advocating for female empowerment. I'm interested in studying how technology intersects with sociology, with the goal of using my coding skills to enhance people's quality of life.
-                </p>
-            </div>
-            <div class="home-column-right">
-                <img class="home-img" src="assets/imgs/Subject.png">
-            </div>
-        </div>
-        <div class="home-slider-wrapper">
-            <div class="home-image-list">
-                <img src="assets/imgs/friends/6cb3f12d-0aea-4401-a980-11802dfc8912.jpg" alt="img-1" class="image-item">
-                <img src="assets/imgs/friends/066D6B23-073B-4ADC-8189-C9300CB88312.jpg" alt="img-8" class="image-item">
-                <img src="assets/imgs/friends/5106ed5a-611b-4f07-86f6-c1f6b8242ef3.jpg" alt="img-2" class="image-item" >
-                <img src="assets/imgs/friends/C93F1688-67DE-4934-8CDF-D8B9272EB91B.jpg" alt="img-3" class="image-item">
-                <img src="assets/imgs/friends/IMG_0268.jpeg" alt="img-4" class="image-item">
-                <img src="assets/imgs/friends/IMG_0498.jpeg" alt="img-5" class="image-item">
-                <img src="assets/imgs/friends/IMG_0772.jpeg" alt="img-6" class="image-item">
-                <img src="assets/imgs/friends/IMG_3735.jpeg" alt="img-7" class="image-item">
-                <img src="assets/imgs/friends/IMG_7800.JPG" alt="img-9" class="image-item">
-                <img src="assets/imgs/friends/IMG_8714.JPG" alt="img-10" class="image-item">
-                <img src="assets/imgs/friends/IMG_9422.JPG" alt="img-11" class="image-item">
-                <img src="assets/imgs/friends/ED24899D-5771-4462-B2DD-C7A7137CC14A_1_102_a.jpeg" alt="img-12" class="image-item">
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="socialIcons">
-                <a href="https://www.instagram.com/s85rr25/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/sherrys2025"><i class="fa-brands fa-github"></i></a>
-                <a href="https://soundcloud.com/zlll-383264983"><i class="fa-brands fa-soundcloud"></i></a>
-                <a href="www.linkedin.com/in/sherry-shen-65022122a"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:sherryshenzl@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-
-            </div>
-            <div class="footerNav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="music.html">Music</a></li>
-                    <li><a href="sports.html">Sports</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <!-- Navigation -->
+    <header class="header" role="banner">
+        <nav class="nav" aria-label="Main navigation">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo" aria-label="Home">Sherry Shen</a>
+                <ul class="nav__list" role="list">
+                    <li class="nav__item"><a href="index.html" class="nav__link nav__link--active" aria-current="page">Home</a></li>
+                    <li class="nav__item"><a href="education.html" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="experience.html" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="service.html" class="nav__link">Service</a></li>
+                    <li class="nav__item"><a href="music.html" class="nav__link">Music</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
             </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <!-- Background Video -->
+            <div class="hero__video-wrapper">
+                <video class="hero__video" autoplay muted loop playsinline>
+                    <source src="assets/imgs/berkeley_backdrop.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Overlay for text readability -->
+            <div class="hero__overlay"></div>
+            <div class="hero__container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <h1 id="hero-heading" class="hero__heading">
+                            <span class="hero__greeting">Hello, I'm</span>
+                            <span class="hero__name">Sherry</span>
+                        </h1>
+                        <p class="hero__description">
+                            I am a student studying <strong>Data Science and Economics</strong> at UC Berkeley. Born and raised in Hong Kong, I am fluent in English, Mandarin, and Cantonese. In my free time, I enjoy music, bouldering, and advocating for female empowerment.
+                        </p>
+                        <p class="hero__description">
+                            I'm interested in studying how technology intersects with sociology, with the goal of using my coding skills to enhance people's quality of life.
+                        </p>
+                    </div>
+                    <div class="home-column-right">
+                        <img class="home-img" src="assets/imgs/Subject.png" alt="Sherry Shen">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <div class="footer__social">
+                <h3 class="footer__heading">Connect</h3>
+                <ul class="footer__social-list" role="list">
+                    <li class="footer__social-item">
+                        <a href="https://www.instagram.com/s85rr25/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://github.com/s85rr25" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://soundcloud.com/zlll-383264983" class="footer__social-link" aria-label="SoundCloud" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-soundcloud" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://www.linkedin.com/in/sherry-shen-zl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="mailto:sherryshenzl@gmail.com" class="footer__social-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="footer__nav" aria-label="Footer navigation">
+                <ul class="footer__nav-list" role="list">
+                    <li class="footer__nav-item"><a href="index.html" class="footer__nav-link">Home</a></li>
+                    <li class="footer__nav-item"><a href="education.html" class="footer__nav-link">Education</a></li>
+                    <li class="footer__nav-item"><a href="experience.html" class="footer__nav-link">Experience</a></li>
+                    <li class="footer__nav-item"><a href="projects.html" class="footer__nav-link">Projects</a></li>
+                    <li class="footer__nav-item"><a href="service.html" class="footer__nav-link">Service</a></li>
+                    <li class="footer__nav-item"><a href="music.html" class="footer__nav-link">Music</a></li>
+                    <li class="footer__nav-item"><a href="contact.html" class="footer__nav-link">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="footerBottom">
-            <p>Copyright &copy;2024; Designed by <span class="designer">Sherry Shen</span></p>
+        <div class="footer__bottom">
+            <p class="footer__copyright">
+                Copyright &copy; <span id="year">2024</span>; Designed by <span class="footer__designer">Sherry Shen</span>
+            </p>
         </div>
     </footer>
 
-
+    <script>
+        // Update copyright year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

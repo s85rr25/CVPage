@@ -8,89 +8,205 @@
     <link rel="stylesheet" href="assets/css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/gallery.js" defer></script>
+    <script src="assets/js/page-navigation.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="logo">Sherry Shen</div>
-        <div class="nav-items">
-            <a href="index.html">Home</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="projects.html">Projects</a>
-            <a href="service.html">Service</a>
-            <a href="music.html">Music</a>
-            <a href="sports.html">Sports</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+    <!-- Navigation -->
+    <header class="header" role="banner">
+        <nav class="nav" aria-label="Main navigation">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo" aria-label="Home">Sherry Shen</a>
+                <ul class="nav__list" role="list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="education.html" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="experience.html" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="service.html" class="nav__link nav__link--active" aria-current="page">Service</a></li>
+                    <li class="nav__item"><a href="music.html" class="nav__link">Music</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <section class="service-page">
-        <h1>My Community Service</h1>
+        <div class="page-header">
+            <h1 class="page-title">My Community Service</h1>
+        </div>
         <div class="service-container">
             <h2>Foo\Bar (Girl Code)</h2>
             <p>
                 I am the president of Girl Code, a student-led community service group that empowers marginalized communities to join STEM fields. I crafted a year-long curriculum with volunteers and schoolteachers, and provided weekly lessons to ethnic minority children, refugees, and migrant workers, on the basics of coding.
             </p>
-            <div class="girlcode-slider-wrapper">
-                <button id="prev-slide" class="slide-button fa-solid fa-chevron-left"></button>
-                <div class="girlcode-image-list">
-                    <img src="assets/imgs/service/girlcode/81137b1a-2849-4d38-a3aa-5b11bcdbfdb5.jpg" alt="img-2" class="image-item">
-                    <img src="assets/imgs/service/girlcode/29573438-27a8-4c46-aea8-364c38800309.jpg" alt="img-18" class="image-item">
-                    <img src="assets/imgs/service/girlcode/b041b11b-4e08-4f91-92ba-49c8d15a3f04.jpg" alt="img-1" class="image-item">
-                    <img src="assets/imgs/service/girlcode/IMG_2301.jpeg" alt="img-8" class="image-item">
-                    <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.38.11.png" alt="img-3" class="image-item">
-                    <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.39.15.png" alt="img-4" class="image-item">
-                    <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.39.49.png" alt="img-5" class="image-item">
-                    <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.41.34.png" alt="img-6" class="image-item">
-                    <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.42.01.png" alt="img-7" class="image-item">
-                    <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.42.25.png" alt="img-9" class="image-item">
-                    <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.42.45.png" alt="img-10" class="image-item">
+            <div class="gallery-container" data-gallery="girlcode">
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/81137b1a-2849-4d38-a3aa-5b11bcdbfdb5.jpg">
+                        <img src="assets/imgs/service/girlcode/81137b1a-2849-4d38-a3aa-5b11bcdbfdb5.jpg" alt="Girl Code Activity">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/29573438-27a8-4c46-aea8-364c38800309.jpg">
+                        <img src="assets/imgs/service/girlcode/29573438-27a8-4c46-aea8-364c38800309.jpg" alt="Girl Code Activity">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/b041b11b-4e08-4f91-92ba-49c8d15a3f04.jpg">
+                        <img src="assets/imgs/service/girlcode/b041b11b-4e08-4f91-92ba-49c8d15a3f04.jpg" alt="Girl Code Activity">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/IMG_2301.jpeg">
+                        <img src="assets/imgs/service/girlcode/IMG_2301.jpeg" alt="Girl Code Activity">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.38.11.png">
+                        <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.38.11.png" alt="Girl Code Screenshot">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.39.15.png">
+                        <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.39.15.png" alt="Girl Code Screenshot">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.39.49.png">
+                        <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.39.49.png" alt="Girl Code Screenshot">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.41.34.png">
+                        <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.41.34.png" alt="Girl Code Screenshot">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.42.01.png">
+                        <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.42.01.png" alt="Girl Code Screenshot">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.42.25.png">
+                        <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.42.25.png" alt="Girl Code Screenshot">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.42.45.png">
+                        <img src="assets/imgs/service/girlcode/Screenshot%202024-10-13%20at%2023.42.45.png" alt="Girl Code Screenshot">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
                 </div>
-                <button id="next-slide" class="slide-button fa-solid fa-chevron-right"></button>
             </div>
             <h2>HOPE Worldwide</h2>
             <p>
                 I assisted non-Chinese-speaking children in weekly one-on-one Chinese and Mathematics lessons.
             </p>
-            <div class="hope-slider-wrapper">
-                <button id="prev-slide-2" class="slide-button fa-solid fa-chevron-left"></button>
-                <div class="hope-image-list">
-                    <img src="assets/imgs/service/hope/f2eabf08-e135-4024-8e51-fa575298ddcb.jpg" alt="img-2" class="image-item">
-                    <img src="assets/imgs/service/hope/1639944B-A1A8-40FA-B42F-3944F1A63C0F_1_102_o.jpeg" class="image-item">
-                    <img src="assets/imgs/service/hope/DCBB420C-EE1F-4BC2-AA52-F649805DAE95_1_102_o.jpeg" class="image-item">
-                    <img src="assets/imgs/service/hope/IMG_8310.jpeg" alt="img-18" class="image-item">
+            <div class="gallery-container" data-gallery="hope">
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-src="assets/imgs/service/hope/f2eabf08-e135-4024-8e51-fa575298ddcb.jpg">
+                        <img src="assets/imgs/service/hope/f2eabf08-e135-4024-8e51-fa575298ddcb.jpg" alt="HOPE Worldwide Activity">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/hope/1639944B-A1A8-40FA-B42F-3944F1A63C0F_1_102_o.jpeg">
+                        <img src="assets/imgs/service/hope/1639944B-A1A8-40FA-B42F-3944F1A63C0F_1_102_o.jpeg" alt="HOPE Worldwide Activity">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/hope/DCBB420C-EE1F-4BC2-AA52-F649805DAE95_1_102_o.jpeg">
+                        <img src="assets/imgs/service/hope/DCBB420C-EE1F-4BC2-AA52-F649805DAE95_1_102_o.jpeg" alt="HOPE Worldwide Activity">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="assets/imgs/service/hope/IMG_8310.jpeg">
+                        <img src="assets/imgs/service/hope/IMG_8310.jpeg" alt="HOPE Worldwide Activity">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
                 </div>
-                <button id="next-slide-2" class="slide-button fa-solid fa-chevron-right"></button>
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="socialIcons">
-                <a href="https://www.instagram.com/s85rr25/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/sherrys2025"><i class="fa-brands fa-github"></i></a>
-                <a href="https://soundcloud.com/zlll-383264983"><i class="fa-brands fa-soundcloud"></i></a>
-                <a href="www.linkedin.com/in/sherry-shen-65022122a"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:sherryshenzl@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-
-            </div>
-            <div class="footerNav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="music.html">Music</a></li>
-                    <li><a href="sports.html">Sports</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <div class="footer__social">
+                <h3 class="footer__heading">Connect</h3>
+                <ul class="footer__social-list" role="list">
+                    <li class="footer__social-item">
+                        <a href="https://www.instagram.com/s85rr25/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://github.com/s85rr25" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://soundcloud.com/zlll-383264983" class="footer__social-link" aria-label="SoundCloud" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-soundcloud" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://www.linkedin.com/in/sherry-shen-zl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="mailto:sherryshenzl@gmail.com" class="footer__social-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
+            <nav class="footer__nav" aria-label="Footer navigation">
+                <ul class="footer__nav-list" role="list">
+                    <li class="footer__nav-item"><a href="index.html" class="footer__nav-link">Home</a></li>
+                    <li class="footer__nav-item"><a href="education.html" class="footer__nav-link">Education</a></li>
+                    <li class="footer__nav-item"><a href="experience.html" class="footer__nav-link">Experience</a></li>
+                    <li class="footer__nav-item"><a href="projects.html" class="footer__nav-link">Projects</a></li>
+                    <li class="footer__nav-item"><a href="service.html" class="footer__nav-link">Service</a></li>
+                    <li class="footer__nav-item"><a href="music.html" class="footer__nav-link">Music</a></li>
+                    <li class="footer__nav-item"><a href="contact.html" class="footer__nav-link">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="footerBottom">
-            <p>Copyright &copy;2024; Designed by <span class="designer">Sherry Shen</span></p>
+        <div class="footer__bottom">
+            <p class="footer__copyright">
+                Copyright &copy; <span id="year">2024</span>; Designed by <span class="footer__designer">Sherry Shen</span>
+            </p>
         </div>
     </footer>
 
+    <script>
+        // Update copyright year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></span>
+        <span class="lightbox-next"><i class="fa-solid fa-chevron-right"></i></span>
+        <img class="lightbox-image" src="" alt="">
+        <div class="lightbox-counter"></div>
+    </div>
 
 </body>
 </html>
