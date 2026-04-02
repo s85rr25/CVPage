@@ -122,21 +122,12 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        const line = document.getElementById('hero-typewriter');
-        const caret = document.querySelector('.hero__title .caret');
         const sub = document.getElementById('hero-role');
-
-        const fullLine = "Hi, I'm Sherry — I build things with data.";
-        typeWriter(line, fullLine, prefersReducedMotion ? 0 : 38, function () {
-            if (caret) caret.setAttribute('hidden', 'hidden');
-        });
-
-        var delay = prefersReducedMotion ? 0 : fullLine.length * 38 + 400;
         cycleSubtitle(
             sub,
-            ['Data Scientist', 'Product Manager', 'Builder', "UC Berkeley '28"],
+            ['Data Scientist', 'Product Manager', 'Builder', 'UC Berkeley 28'],
             prefersReducedMotion ? 0 : 42,
-            delay
+            prefersReducedMotion ? 0 : 2600
         );
 
         initStats();

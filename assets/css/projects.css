@@ -1,4 +1,4 @@
-/* Projects — filters, cards, hidden galleries, lightbox (sakura) */
+/* Projects, filters, cards, hidden galleries, lightbox (sakura) */
 .projects-page {
     padding-bottom: var(--space-3xl);
 }
@@ -58,20 +58,89 @@
 
 .project-card {
     position: relative;
-    padding: var(--space-xl);
     text-align: left;
     cursor: default;
     border-radius: var(--radius-lg);
     overflow: hidden;
+    padding: 0;
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.project-card[data-open-gallery] {
-    cursor: pointer;
-}
-
-.project-card[data-open-gallery]:hover {
+.project-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-sakura-hover);
+}
+
+.project-card__media {
+    height: 220px;
+    position: relative;
+    background: rgba(253, 246, 249, 0.35);
+}
+
+.project-card__cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card__media-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(61, 28, 46, 0.05) 0%, rgba(242, 174, 187, 0.35) 55%, rgba(232, 196, 207, 0.25) 100%);
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.project-card__media-actions {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.project-card:hover .project-card__media-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-card__media-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card__pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: 0.65rem 1rem;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(253, 246, 249, 0.55);
+    background: rgba(253, 246, 249, 0.2);
+    color: var(--cream);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0 24px rgba(242, 174, 187, 0.18);
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.project-card__pill:hover {
+    transform: scale(1.05);
+    background: rgba(242, 174, 187, 0.35);
+    box-shadow: 0 0 34px rgba(242, 174, 187, 0.35);
+}
+
+.project-card__content {
+    padding: var(--space-xl);
+    text-align: left;
 }
 
 .project-card__corner {
@@ -153,7 +222,7 @@
     color: var(--text-muted);
 }
 
-/* Hidden galleries — off-screen but in DOM for lightbox */
+/* Hidden galleries, off-screen but in DOM for lightbox */
 .project-galleries {
     position: absolute;
     width: 1px;
@@ -212,7 +281,7 @@
     color: var(--cream);
 }
 
-/* Lightbox — plum tint */
+/* Lightbox, plum tint */
 .lightbox {
     display: none;
     position: fixed;

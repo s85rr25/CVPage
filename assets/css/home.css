@@ -1,4 +1,4 @@
-/* Home — hero, petals, highlights, education */
+/* Home hero scene, highlights, education */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -7,6 +7,7 @@
     justify-content: center;
     padding: calc(var(--nav-h) + var(--space-xl)) var(--container-pad) var(--space-2xl);
     overflow: hidden;
+    background: linear-gradient(180deg, #1A0A12 0%, #3D1C2E 45%, #6B2D4E 100%);
 }
 
 .hero__video-wrap {
@@ -15,51 +16,122 @@
     z-index: 0;
 }
 
-.hero__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
 .hero__overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background:
-        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(61, 28, 46, 0.45) 0%, transparent 65%),
-        linear-gradient(165deg, rgba(61, 28, 46, 0.62) 0%, rgba(242, 174, 187, 0.5) 45%, rgba(61, 28, 46, 0.68) 100%);
-    box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.35);
+    background: rgba(26, 10, 18, 0.55);
 }
 
-.hero__petals {
+.hero__bg {
     position: absolute;
     inset: 0;
-    z-index: 2;
+    z-index: 0;
+}
+
+.hero__tree {
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    transform: translateX(-50%);
+    width: min(980px, 110vw);
+    height: auto;
+    opacity: 0.98;
+}
+
+.tree-stroke .tree-branch {
+    fill: none;
+    stroke: rgba(253, 246, 249, 0.25);
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+    animation: branchDraw 1.2s ease-out forwards;
+    animation-delay: var(--draw-delay, 0s);
+}
+
+.tree-blooms .blossom {
+    transform-origin: center;
+    transform: scale(0);
+    opacity: 0;
+    animation: blossomBloom 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: var(--bloom-delay, 1.5s);
+}
+
+.hero__drift-petals {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     pointer-events: none;
     overflow: hidden;
 }
 
-.hero__petal {
+.hero__drift-petal {
     position: absolute;
-    width: var(--w, 12px);
-    height: var(--h, 16px);
-    left: var(--left, 10%);
-    bottom: -5%;
+    left: var(--left, 50%);
+    top: -20px;
+    width: var(--size, 14px);
+    height: calc(var(--size, 14px) * 1.1);
     opacity: 0;
-    animation: petalDrift var(--dur, 18s) linear infinite;
-    animation-delay: var(--delay, 0s);
+    animation: driftPetal var(--dur, 14s) linear infinite;
+    animation-delay: calc(var(--delay, 1s) + 1.8s);
 }
 
-.hero__petal::before {
+.hero__drift-petal::before {
     content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(253, 246, 249, 0.95), var(--petal-1));
+    position: absolute;
+    inset: 0;
     border-radius: 120% 80% 100% 60% / 100% 60% 120% 80%;
+    background: linear-gradient(135deg, rgba(253, 246, 249, 0.92), var(--petal-1));
     box-shadow: 0 1px 4px rgba(61, 28, 46, 0.15);
     transform: rotate(-25deg);
+}
+
+@keyframes branchDraw {
+    from {
+        stroke-dashoffset: 1200;
+        opacity: 0;
+    }
+    to {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes blossomBloom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.18);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes driftPetal {
+    0% {
+        transform: translate3d(-50%, -20px, 0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    12% {
+        opacity: var(--opacity, 0.7);
+    }
+    45% {
+        transform: translate3d(-50%, 46vh, 0) translateX(var(--sway1, 18px)) rotate(140deg);
+    }
+    80% {
+        transform: translate3d(-50%, 86vh, 0) translateX(var(--sway2, -12px)) rotate(280deg);
+    }
+    100% {
+        transform: translate3d(-50%, 110vh, 0) translateX(0) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 .hero__inner {
@@ -90,20 +162,6 @@
     min-height: 1.2em;
 }
 
-.hero__title .caret {
-    display: inline-block;
-    width: 3px;
-    height: 0.85em;
-    margin-left: 2px;
-    background: var(--petal-1);
-    animation: caretBlink 1s step-end infinite;
-    vertical-align: -0.05em;
-}
-
-@keyframes caretBlink {
-    50% { opacity: 0; }
-}
-
 .hero__subtitle-wrap {
     margin-top: var(--space-md);
     min-height: 1.5em;
@@ -122,6 +180,20 @@
     line-height: var(--line-relaxed);
     color: rgba(253, 246, 249, 0.95);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.hero__text-reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: heroTextIn 0.9s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes heroTextIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero__actions {
@@ -182,6 +254,12 @@
 @media (max-width: 480px) {
     .highlights__grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__drift-petals .hero__drift-petal:nth-child(n+16) {
+        display: none;
     }
 }
 

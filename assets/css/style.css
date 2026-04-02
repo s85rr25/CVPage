@@ -1,5 +1,5 @@
 /* ============================================
-   SHERY SHEN — SAKURA DESIGN SYSTEM
+   SHERY SHEN, SAKURA DESIGN SYSTEM
    ============================================ */
 :root {
     --petal-1: #f2aebb;
@@ -752,7 +752,7 @@ body {
     }
 }
 
-/* Focus — WCAG */
+/* Focus, WCAG */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
