@@ -156,6 +156,18 @@
         });
     }
 
+    function initImageErrorHandling() {
+        // Handle failed image loads
+        document.querySelectorAll('img[src*="clearbit"], img[src*="logo"]').forEach(function (img) {
+            img.addEventListener('error', function () {
+                this.classList.add('error');
+            });
+            img.addEventListener('load', function () {
+                this.classList.remove('error');
+            });
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         initSkipLink();
         initNavScroll();
@@ -164,5 +176,6 @@
         initReveal();
         initHeroVideo();
         initAnchorScroll();
+        initImageErrorHandling();
     });
 })();

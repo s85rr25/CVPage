@@ -222,6 +222,60 @@
     color: var(--text-muted);
 }
 
+/* Photo carousel strip for project cards */
+.project-card__carousel {
+    margin-top: var(--space-lg);
+    padding: 0 -8px;
+}
+
+.project-card__carousel-track {
+    display: flex;
+    gap: var(--space-sm);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: -4px 0;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-card__carousel-track::-webkit-scrollbar {
+    height: 4px;
+}
+
+.project-card__carousel-track::-webkit-scrollbar-track {
+    background: rgba(242, 174, 187, 0.15);
+    border-radius: var(--radius-full);
+}
+
+.project-card__carousel-track::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--petal-1), var(--plum-light));
+    border-radius: var(--radius-full);
+}
+
+.project-card__carousel-item {
+    flex: 0 0 88px;
+    height: 88px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.project-card__carousel-item:hover {
+    transform: scale(1.05);
+    border-color: var(--petal-1);
+    box-shadow: 0 0 12px rgba(242, 174, 187, 0.3);
+}
+
+.project-card__carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* Hidden galleries, off-screen but in DOM for lightbox */
 .project-galleries {
     position: absolute;
@@ -379,6 +433,102 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+/* Loom responsive embed modal */
+.loom-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: var(--space-lg);
+}
+
+.loom-modal.is-open {
+    display: flex;
+}
+
+.loom-modal__container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.95);
+}
+
+.loom-modal__iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: var(--radius-lg);
+}
+
+.loom-modal__close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2001;
+    transition: color var(--transition), transform var(--transition);
+}
+
+.loom-modal__close:hover {
+    color: var(--petal-1);
+    transform: scale(1.1);
+}
+
+.loom-modal__close:focus-visible {
+    outline: 2px solid var(--petal-1);
+    outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    .loom-modal {
+        padding: var(--space-sm);
+    }
+
+    .loom-modal__container {
+        max-width: 100%;
+    }
+
+    .loom-modal__close {
+        top: -40px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .loom-modal {
+        padding: 0;
+    }
+
+    .loom-modal__container {
+        border-radius: 0;
+        aspect-ratio: 16 / 9;
+    }
+
+    .loom-modal__iframe {
+        border-radius: 0;
+    }
+
+    .loom-modal__close {
+        top: 12px;
+        right: 12px;
+        color: rgba(255, 255, 255, 0.9);
     }
 }
 

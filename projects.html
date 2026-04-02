@@ -52,16 +52,15 @@
 
         <div class="project-filters" role="toolbar" aria-label="Filter projects">
             <button type="button" class="filter-pill is-active" data-filter="all" aria-pressed="true">All</button>
-            <button type="button" class="filter-pill" data-filter="ml" aria-pressed="false">ML</button>
+            <button type="button" class="filter-pill" data-filter="ml-data" aria-pressed="false">ML/Data</button>
             <button type="button" class="filter-pill" data-filter="product" aria-pressed="false">Product</button>
             <button type="button" class="filter-pill" data-filter="community" aria-pressed="false">Community</button>
-            <button type="button" class="filter-pill" data-filter="web" aria-pressed="false">Web</button>
         </div>
 
         <div class="projects-grid">
-            <article class="project-card glass-card reveal" data-tags="ml product">
+            <article class="project-card glass-card reveal" data-tags="ml-data product">
                 <div class="project-card__media" aria-hidden="true">
-                    <img class="project-card__cover" src="assets/imgs/project/hackathon/winners.png" alt="Policy Impact Predictor preview" loading="lazy">
+                    <img class="project-card__cover" src="assets/imgs/5A301D3D-454B-4FF5-992A-6D341C6C5CB2_4_5005_c.jpeg" alt="Cal Datathon for Social Good 2025 team" loading="lazy">
                     <div class="project-card__media-overlay" aria-hidden="true"></div>
                     <div class="project-card__media-actions" aria-hidden="true">
                         <a class="project-card__pill" href="https://github.com/andymaoo/CalDatathon2025" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -83,7 +82,7 @@
                 </div>
             </article>
 
-            <article class="project-card glass-card reveal" data-tags="product web">
+            <article class="project-card glass-card reveal" data-tags="product">
                 <div class="project-card__media" aria-hidden="true">
                     <img class="project-card__cover" src="assets/imgs/project/Screenshot%202024-10-20%20at%2016.58.21.png" alt="Shareable project preview" loading="lazy">
                     <div class="project-card__media-overlay" aria-hidden="true"></div>
@@ -100,7 +99,7 @@
                 </div>
             </article>
 
-            <article class="project-card glass-card reveal" data-tags="web">
+            <article class="project-card glass-card reveal" data-tags="product">
                 <div class="project-card__media" aria-hidden="true">
                     <img class="project-card__cover" src="assets/imgs/project/edupulse/Screenshot%202024-10-20%20at%2018.09.40.png" alt="EduPulse project preview" loading="lazy">
                     <div class="project-card__media-overlay" aria-hidden="true"></div>
@@ -125,12 +124,21 @@
                 </div>
                 <div class="project-card__content">
                     <span class="project-card__corner" aria-hidden="true"></span>
-                    <h2>Foo\Bar Hackathon 2024</h2>
+                    <h2>Foo Bar Hackathon 2024</h2>
                     <p class="project-card__meta">Organizer &amp; reviver · Microsoft-sponsored</p>
                     <div class="project-card__tags"><span class="tag">Community</span><span class="tag">EdTech</span><span class="tag">Leadership</span></div>
                     <p>Revived and expanded the school's annual hackathon, opening it to under-resourced communities. Secured Microsoft sponsorship and NGO partnerships.</p>
                     <div class="project-card__links">
                         <a href="https://www.ciscscouncil.com/hackathon" target="_blank" rel="noopener noreferrer">Website</a>
+                    </div>
+                    <div class="project-card__carousel">
+                        <div class="project-card__carousel-track" data-gallery="hackathon">
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/hackathon/winners.png" alt="Hackathon winners" loading="lazy"></div>
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/hackathon/group%20photo.jpg" alt="Hackathon group photo" loading="lazy"></div>
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/hackathon/opening.png" alt="Hackathon opening" loading="lazy"></div>
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/hackathon/guest%20speaker.png" alt="Guest speaker" loading="lazy"></div>
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/hackathon/presentation.png" alt="Student presentation" loading="lazy"></div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -151,6 +159,15 @@
                     <p>Organized a large-scale coding event for girls with guest speakers, workshops, and tech exhibits to dismantle gender stereotypes in CS.</p>
                     <div class="project-card__links">
                         <a href="https://codehershk.org/" target="_blank" rel="noopener noreferrer">Website</a>
+                    </div>
+                    <div class="project-card__carousel">
+                        <div class="project-card__carousel-track" data-gallery="codehers">
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/codehers/DSC09257.jpg" alt="CodeHers participants" loading="lazy"></div>
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/codehers/SwiftCoding.png" alt="Swift coding workshop" loading="lazy"></div>
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/codehers/DSC_0017.JPG" alt="CodeHers event" loading="lazy"></div>
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/codehers/DSC_0042.JPG" alt="CodeHers participants" loading="lazy"></div>
+                            <div class="project-card__carousel-item"><img src="assets/imgs/project/codehers/DSC_0165.JPG" alt="CodeHers workshop" loading="lazy"></div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -197,6 +214,13 @@
             </div>
         </div>
     </main>
+
+    <div class="loom-modal" id="loom-modal" aria-hidden="true" role="dialog" aria-labelledby="loom-modal-title">
+        <button type="button" class="loom-modal__close" aria-label="Close Loom embed" id="loom-modal-close">&times;</button>
+        <div class="loom-modal__container">
+            <iframe class="loom-modal__iframe" id="loom-iframe" src="" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <footer class="footer" role="contentinfo">
         <div class="footer__inner">

@@ -100,9 +100,14 @@
     height: 48px;
     border-radius: 14px;
     object-fit: cover;
-    background: rgba(253, 246, 249, 0.35);
+    background: linear-gradient(135deg, var(--petal-1), var(--petal-2));
     box-shadow: 0 0 0 3px rgba(242, 174, 187, 0.22);
     transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+.timeline-logo[src=""],
+.timeline-logo.error {
+    background: linear-gradient(135deg, var(--petal-1), var(--petal-2));
 }
 
 .timeline-item:hover .timeline-logo,
@@ -120,6 +125,33 @@
     color: var(--plum);
     background: rgba(61, 28, 46, 0.08);
     border: 2px solid rgba(242, 174, 187, 0.35);
+}
+
+/* Company logo badge variants */
+.timeline-logo--badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.timeline-logo--capital-one {
+    background: #004879;
+    color: white;
+}
+
+.timeline-logo--natgeo {
+    background: #FFCC00;
+    color: black;
+    font-weight: 800;
+}
+
+.timeline-logo--pwc {
+    background: #E0301E;
+    color: white;
 }
 
 .tag {
