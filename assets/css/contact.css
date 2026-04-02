@@ -1,65 +1,144 @@
-.contact-container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+/* Contact page */
+.contact-page {
+    min-height: calc(100vh - 8rem);
+    padding-bottom: var(--space-3xl);
 }
 
-.contact-container .contact-left {
-    display: flex;
-    flex-direction: column;
+.contact-hero {
+    text-align: center;
+    padding: calc(var(--nav-h) + var(--space-xl)) var(--container-pad) var(--space-lg);
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.contact-hero__blossom {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: var(--space-md);
+    filter: drop-shadow(0 4px 12px rgba(242, 174, 187, 0.5));
+}
+
+.contact-hero__title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-4xl);
+    color: var(--plum);
+    margin-bottom: var(--space-md);
+}
+
+.contact-hero__msg {
+    font-size: var(--font-size-lg);
+    color: var(--text-muted);
+    line-height: var(--line-relaxed);
+}
+
+.contact-layout {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 var(--container-pad);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-2xl);
     align-items: start;
-    gap: 20px;
 }
 
-h1 {
-    color: #72845a;
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
-hr {
-    border: none;
-    width: 120px;
-    height: 5px;
-    background-color: #A5B68D;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.contact-form {
+    padding: var(--space-xl);
 }
 
-.contact-inputs {
-    width: 400px;
-    height: 50px;
-    border: none;
+.contact-form label {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--plum);
+    margin-bottom: var(--space-xs);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: var(--space-md);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    background: rgba(253, 246, 249, 0.85);
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
     outline: none;
-    padding-left: 25px;
-    font-weight: 500;
-    color: #666;
-    border-radius: 5px;
+    border-color: var(--petal-1);
+    box-shadow: 0 0 0 3px rgba(242, 174, 187, 0.45);
 }
 
-.contact-inputs:focus {
-    border: 2px solid #A5B68D;
+.contact-form textarea {
+    min-height: 160px;
+    resize: vertical;
 }
 
-.contact-left textarea {
-    height: 140px;
-    padding-top: 15px;
-    border-radius: 20px;
+.contact-form button[type="submit"] {
+    width: 100%;
+    margin-top: var(--space-sm);
 }
 
-.contact-left button {
-    background-color: #72845a;
-    color: white;
+.contact-social {
+    padding: var(--space-xl);
 }
 
-.contact-right img {
-    width: 500px;
+.contact-social h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    color: var(--plum);
+    margin-bottom: var(--space-md);
 }
 
-@media (max-width: 800px) {
-    .contact-inputs {
-        width: 80vw;
-    }
-    .contact-right {
-        display: none;
-    }
+.contact-social__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.contact-social__list a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-full);
+    background: var(--cream);
+    color: var(--plum);
+    text-decoration: none;
+    box-shadow: var(--shadow-sakura);
+    transition: transform var(--transition), background var(--transition);
+}
+
+.contact-social__list a:hover {
+    transform: scale(1.08);
+    background: var(--petal-1);
+}
+
+.contact-social__list i {
+    font-size: var(--font-size-xl);
+}
+
+.contact-art {
+    margin-top: var(--space-lg);
+    text-align: center;
+    opacity: 0.9;
+}
+
+.contact-art img {
+    max-width: 220px;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sakura);
 }

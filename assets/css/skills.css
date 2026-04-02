@@ -1,0 +1,112 @@
+/* Skills page */
+.skills-page {
+    padding-bottom: var(--space-3xl);
+}
+
+.skills-section {
+    max-width: var(--container-max);
+    margin: 0 auto var(--space-2xl);
+    padding: 0 var(--container-pad);
+}
+
+.skills-section__title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    color: var(--plum);
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.skills-section__title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--petal-1), transparent);
+    max-width: 200px;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-md);
+}
+
+.skill-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg) var(--space-sm);
+    text-align: center;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--plum);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.skill-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 24px rgba(242, 174, 187, 0.45);
+}
+
+.skill-tile i {
+    font-size: 2.25rem;
+}
+
+.skill-tile--text {
+    font-size: var(--font-size-sm);
+}
+
+.lang-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-md);
+}
+
+.lang-card {
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.lang-card__flag {
+    font-size: 2rem;
+    margin-bottom: var(--space-xs);
+}
+
+.lang-card__name {
+    font-weight: 700;
+    color: var(--plum);
+    margin-bottom: var(--space-xs);
+}
+
+.lang-card__level {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    background: rgba(242, 174, 187, 0.35);
+    font-size: var(--font-size-sm);
+    color: var(--plum);
+}
+
+.pm-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-sm);
+}
+
+.pm-pill {
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--cream);
+    border: 1px solid var(--glass-border);
+    font-size: var(--font-size-sm);
+    color: var(--text);
+    transition: box-shadow var(--transition);
+}
+
+.pm-pill:hover {
+    box-shadow: var(--shadow-sakura);
+}

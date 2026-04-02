@@ -3,126 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sherry Shen - Data Science and Economics student at UC Berkeley">
-    <title>Sherry Shen | Portfolio</title>
-    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Sherry Shen — Data Scientist and Product Manager. UC Berkeley Data Science & Economics. ML at Capital One, geospatial research at National Geographic, AI products at MIIDO.">
+    <meta name="keywords" content="Sherry Shen, data science, product manager, UC Berkeley, machine learning">
+    <meta name="author" content="Sherry Shen">
+    <link rel="canonical" href="https://sherryshenzl.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sherry Shen | Home">
+    <meta property="og:description" content="Data Scientist & Product Manager. I build things with data — from ML pipelines to farmer-facing AI products.">
+    <meta property="og:url" content="https://sherryshenzl.com/">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sherry Shen | Home">
+    <meta name="twitter:description" content="Data Scientist & Product Manager at UC Berkeley. ML, geospatial analytics, and human-centered products.">
+    <title>Sherry Shen | Home</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/home.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/home.js" defer></script>
     <script src="assets/js/page-navigation.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header" role="banner">
+    <div class="cursor-petal" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#f2aebb" d="M12 2c-2 4-6 6-10 6 4 2 6 6 6 10 2-4 6-6 10-6-4-2-6-6-6-10z"/></svg>
+    </div>
+
+    <header class="header header--transparent" role="banner">
         <nav class="nav" aria-label="Main navigation">
             <div class="nav__container">
-                <a href="index.html" class="nav__logo" aria-label="Home">Sherry Shen</a>
-                <ul class="nav__list" role="list">
+                <a href="index.html" class="nav__logo">Sherry Shen</a>
+                <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
+                    <span class="visually-hidden">Menu</span>
+                    <span class="nav__toggle-icon" aria-hidden="true"><span></span></span>
+                </button>
+                <ul class="nav__list" id="nav-menu" role="list">
                     <li class="nav__item"><a href="index.html" class="nav__link nav__link--active" aria-current="page">Home</a></li>
-                    <li class="nav__item"><a href="education.html" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="experience.html" class="nav__link">Experience</a></li>
                     <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="service.html" class="nav__link">Service</a></li>
-                    <li class="nav__item"><a href="music.html" class="nav__link">Music</a></li>
+                    <li class="nav__item"><a href="leadership.html" class="nav__link">Leadership</a></li>
+                    <li class="nav__item"><a href="skills.html" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="main" role="main">
-        <!-- Hero Section -->
+    <main class="main" id="main" role="main">
         <section class="hero" aria-labelledby="hero-heading">
-            <!-- Background Video -->
-            <div class="hero__video-wrapper">
-                <video class="hero__video" autoplay muted loop playsinline>
+            <div class="hero__video-wrap" aria-hidden="true">
+                <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="">
                     <source src="assets/imgs/berkeley_backdrop.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
+                <div class="hero__overlay"></div>
+                <div class="hero__petals">
+                    <span class="hero__petal" style="--left:8%;--p-x:18px;--dur:22s;--delay:0s;--w:10px;--h:14px;--p-opacity:0.45"></span>
+                    <span class="hero__petal" style="--left:18%;--p-x:-12px;--dur:19s;--delay:2s;--w:12px;--h:16px;--p-opacity:0.4"></span>
+                    <span class="hero__petal" style="--left:28%;--p-x:24px;--dur:25s;--delay:5s;--w:9px;--h:12px;--p-opacity:0.35"></span>
+                    <span class="hero__petal" style="--left:42%;--p-x:-20px;--dur:21s;--delay:1s;--w:11px;--h:15px;--p-opacity:0.5"></span>
+                    <span class="hero__petal" style="--left:55%;--p-x:14px;--dur:24s;--delay:7s;--w:10px;--h:13px;--p-opacity:0.38"></span>
+                    <span class="hero__petal" style="--left:68%;--p-x:-16px;--dur:20s;--delay:3s;--w:13px;--h:17px;--p-opacity:0.42"></span>
+                    <span class="hero__petal" style="--left:78%;--p-x:22px;--dur:23s;--delay:6s;--w:8px;--h:11px;--p-opacity:0.33"></span>
+                    <span class="hero__petal" style="--left:88%;--p-x:-10px;--dur:26s;--delay:4s;--w:12px;--h:16px;--p-opacity:0.4"></span>
+                    <span class="hero__petal" style="--left:12%;--p-x:30px;--dur:18s;--delay:8s;--w:10px;--h:14px;--p-opacity:0.36"></span>
+                    <span class="hero__petal" style="--left:92%;--p-x:-28px;--dur:17s;--delay:9s;--w:9px;--h:12px;--p-opacity:0.3"></span>
+                </div>
             </div>
-            <!-- Overlay for text readability -->
-            <div class="hero__overlay"></div>
-            <div class="hero__container">
-                <div class="hero__content">
-                    <div class="hero__text">
-                        <h1 id="hero-heading" class="hero__heading">
-                            <span class="hero__greeting">Hello, I'm</span>
-                            <span class="hero__name">Sherry</span>
-                        </h1>
-                        <p class="hero__description">
-                            I am a student studying <strong>Data Science and Economics</strong> at UC Berkeley. Born and raised in Hong Kong, I am fluent in English, Mandarin, and Cantonese. In my free time, I enjoy music, bouldering, and advocating for female empowerment.
-                        </p>
-                        <p class="hero__description">
-                            I'm interested in studying how technology intersects with sociology, with the goal of using my coding skills to enhance people's quality of life.
-                        </p>
+            <div class="hero__inner">
+                <p class="hero__eyebrow">Portfolio</p>
+                <h1 id="hero-heading" class="hero__title">
+                    <span id="hero-typewriter" aria-live="polite"></span><span class="caret" aria-hidden="true"></span>
+                </h1>
+                <div class="hero__subtitle-wrap">
+                    <p id="hero-role" class="hero__subtitle" aria-live="polite"></p>
+                </div>
+                <p class="hero__bio">
+                    I'm a Data Science &amp; Economics student at UC Berkeley with a 4.0 GPA, building ML systems at Capital One, geospatial models at National Geographic, and AI-powered products for farmers at MIIDO. I'm originally from Hong Kong, fluent in English, Mandarin, and Cantonese — and I believe code should make people's lives meaningfully better.
+                </p>
+                <div class="hero__actions">
+                    <a href="projects.html" class="btn btn--primary">View My Work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="assets/resume.pdf" class="btn btn--ghost" download>Download Resume <i class="fa-solid fa-download" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <a href="#highlights" class="hero__scroll">
+                <span class="hero__scroll-petal" aria-hidden="true">🌸</span>
+                <span>Scroll</span>
+            </a>
+        </section>
+
+        <section id="highlights" class="highlights" aria-labelledby="highlights-heading">
+            <h2 id="highlights-heading" class="visually-hidden">Highlights</h2>
+            <div class="highlights__grid reveal-stagger">
+                <article class="highlight-card glass-card reveal" data-stat="gpa">
+                    <div class="highlight-card__icon" aria-hidden="true">🌸</div>
+                    <p class="highlight-card__value"><span class="js-stat-num">0</span> GPA @ UC Berkeley</p>
+                    <p class="highlight-card__label">Academic excellence</p>
+                </article>
+                <article class="highlight-card glass-card reveal" data-stat="billions">
+                    <div class="highlight-card__icon" aria-hidden="true">🌸</div>
+                    <p class="highlight-card__value"><span class="js-stat-num">0</span> Transactions Modeled</p>
+                    <p class="highlight-card__label">Enterprise ML &amp; lineage</p>
+                </article>
+                <article class="highlight-card glass-card reveal" data-stat="farmers">
+                    <div class="highlight-card__icon" aria-hidden="true">🌸</div>
+                    <p class="highlight-card__value"><span class="js-stat-num">0</span> Farmers Served</p>
+                    <p class="highlight-card__label">MIIDO WhatsApp AI</p>
+                </article>
+                <article class="highlight-card glass-card reveal">
+                    <div class="highlight-card__icon" aria-hidden="true">🌸</div>
+                    <p class="highlight-card__value">1st Place — Cal Datathon</p>
+                    <p class="highlight-card__label">Policy Impact Predictor</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="education" class="education-home" aria-labelledby="education-heading">
+            <h2 id="education-heading" class="education-home__title">Education</h2>
+            <div class="education-home__grid">
+                <div class="edu-card glass-card reveal">
+                    <div class="edu-card__seal" role="img" aria-label="UC Berkeley">🐻</div>
+                    <h3>University of California, Berkeley</h3>
+                    <p class="edu-card__meta">
+                        B.A. Data Science &amp; B.S. Economics<br>
+                        Expected May 2028 · SCET Certificate
+                    </p>
+                    <p class="edu-card__gpa">GPA 4.00</p>
+                </div>
+                <div class="edu-card glass-card reveal">
+                    <h3 class="visually-hidden">Honors &amp; coursework</h3>
+                    <div class="badges" role="list">
+                        <span class="badge" role="listitem">🌸 1st Place — Cal Datathon</span>
+                        <span class="badge" role="listitem">🌸 HK Scholarship for Excellence</span>
+                        <span class="badge" role="listitem">🌸 Lyn Edinger Scholar</span>
+                        <span class="badge" role="listitem">🌸 Student of the Year — SCMP</span>
+                        <span class="badge" role="listitem">🌸 Best Analytics — CBS Model Entrepreneurship</span>
                     </div>
-                    <div class="home-column-right">
-                        <img class="home-img" src="assets/imgs/Subject.png" alt="Sherry Shen">
+                    <p class="edu-card__meta" style="margin-bottom:var(--space-sm);font-weight:600;color:var(--plum);">Relevant coursework</p>
+                    <div class="course-tags">
+                        <span>Data 100</span>
+                        <span>CS 61A</span>
+                        <span>Econometrics</span>
+                        <span>Multivariable Calculus</span>
+                        <span>Linear Algebra</span>
+                        <span>Micro / Macro Economics</span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer" role="contentinfo">
-        <div class="footer__container">
-            <div class="footer__social">
-                <h3 class="footer__heading">Connect</h3>
-                <ul class="footer__social-list" role="list">
-                    <li class="footer__social-item">
-                        <a href="https://www.instagram.com/s85rr25/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="https://github.com/s85rr25" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="https://soundcloud.com/zlll-383264983" class="footer__social-link" aria-label="SoundCloud" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-soundcloud" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="https://www.linkedin.com/in/sherry-shen-zl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="mailto:sherryshenzl@gmail.com" class="footer__social-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        </a>
-                    </li>
+        <div class="footer__inner">
+            <div>
+                <p class="footer__brand">Sherry Shen</p>
+                <p class="footer__tagline">Data Science · Product · Impact</p>
+            </div>
+            <div>
+                <p class="footer__heading">Quick links</p>
+                <ul class="footer__nav-list" role="list">
+                    <li><a href="about.html" class="footer__nav-link">About</a></li>
+                    <li><a href="experience.html" class="footer__nav-link">Experience</a></li>
+                    <li><a href="projects.html" class="footer__nav-link">Projects</a></li>
+                    <li><a href="leadership.html" class="footer__nav-link">Leadership</a></li>
+                    <li><a href="skills.html" class="footer__nav-link">Skills</a></li>
+                    <li><a href="contact.html" class="footer__nav-link">Contact</a></li>
                 </ul>
             </div>
-            <nav class="footer__nav" aria-label="Footer navigation">
-                <ul class="footer__nav-list" role="list">
-                    <li class="footer__nav-item"><a href="index.html" class="footer__nav-link">Home</a></li>
-                    <li class="footer__nav-item"><a href="education.html" class="footer__nav-link">Education</a></li>
-                    <li class="footer__nav-item"><a href="experience.html" class="footer__nav-link">Experience</a></li>
-                    <li class="footer__nav-item"><a href="projects.html" class="footer__nav-link">Projects</a></li>
-                    <li class="footer__nav-item"><a href="service.html" class="footer__nav-link">Service</a></li>
-                    <li class="footer__nav-item"><a href="music.html" class="footer__nav-link">Music</a></li>
-                    <li class="footer__nav-item"><a href="contact.html" class="footer__nav-link">Contact</a></li>
+            <div>
+                <p class="footer__heading">Social</p>
+                <ul class="footer__social-list" role="list">
+                    <li><a href="https://www.linkedin.com/in/sherry-shen-zl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/s85rr25" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:sherryshenzl@berkeley.edu" class="footer__social-link" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+                    <li><a href="https://sherryshenzl.com/" class="footer__social-link" aria-label="Website"><i class="fa-solid fa-globe" aria-hidden="true"></i></a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
         <div class="footer__bottom">
-            <p class="footer__copyright">
-                Copyright &copy; <span id="year">2024</span>; Designed by <span class="footer__designer">Sherry Shen</span>
-            </p>
+            <p class="footer__copyright">&copy; 2025 Sherry Shen</p>
         </div>
     </footer>
-
-    <script>
-        // Update copyright year dynamically
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>

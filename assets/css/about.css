@@ -1,0 +1,106 @@
+/* About page */
+.about-page {
+    padding-bottom: var(--space-3xl);
+}
+
+.about-grid {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-pad);
+}
+
+.about-narrative {
+    max-width: 68ch;
+    margin: 0 auto var(--space-2xl);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-relaxed);
+    color: var(--text);
+}
+
+.about-narrative p + p {
+    margin-top: var(--space-md);
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+}
+
+@media (max-width: 900px) {
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.approach-card {
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.approach-card h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    color: var(--plum);
+    margin-bottom: var(--space-sm);
+}
+
+.approach-card p {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    line-height: var(--line-relaxed);
+}
+
+.music-block {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-xl);
+}
+
+.music-block h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    color: var(--plum);
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.music-embeds {
+    display: grid;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.music-embeds iframe {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    display: block;
+    min-height: 315px;
+    border: none;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sakura);
+}
+
+.music-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+}
+
+.ticker {
+    text-align: center;
+    padding: var(--space-lg) var(--container-pad);
+    background: rgba(61, 28, 46, 0.06);
+    border-top: 1px solid var(--glass-border);
+}
+
+.ticker__text {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    color: var(--plum);
+    min-height: 1.5em;
+}

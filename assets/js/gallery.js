@@ -1,11 +1,13 @@
 // Gallery Lightbox Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.querySelector('.lightbox-image');
-    const lightboxClose = document.querySelector('.lightbox-close');
-    const lightboxPrev = document.querySelector('.lightbox-prev');
-    const lightboxNext = document.querySelector('.lightbox-next');
-    const lightboxCounter = document.querySelector('.lightbox-counter');
+    if (!lightbox) return;
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+    const lightboxPrev = lightbox.querySelector('.lightbox-prev');
+    const lightboxNext = lightbox.querySelector('.lightbox-next');
+    const lightboxCounter = lightbox.querySelector('.lightbox-counter');
+    if (!lightboxImage || !lightboxClose || !lightboxPrev || !lightboxNext || !lightboxCounter) return;
     
     let currentImages = [];
     let currentIndex = 0;
@@ -171,6 +173,27 @@ document.addEventListener('DOMContentLoaded', function() {
     
     lightboxImage.addEventListener('loadstart', function() {
         this.style.opacity = '0.5';
+    });
+
+    document.querySelectorAll('[data-open-gallery]').forEach(function (trigger) {
+        trigger.addEventListener('click', function (e) {
+            if (e.target.closest('a[href]')) return;
+            const name = trigger.getAttribute('data-open-gallery');
+            if (!name) return;
+            const container = document.querySelector('[data-gallery="' + name + '"]');
+            if (!container) return;
+            const first = container.querySelector('.gallery-item');
+            if (first) {
+                e.preventDefault();
+                first.click();
+            }
+        });
+        trigger.addEventListener('keydown', function (e) {
+            if (e.key !== 'Enter' && e.key !== ' ') return;
+            if (e.target.closest('a[href]')) return;
+            e.preventDefault();
+            trigger.click();
+        });
     });
 });
 
